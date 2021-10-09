@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Looks Up</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Looks Up Video</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="feature-img">
+                        <img src="pic1.png" width="100%">
+                        <img src="play.png" class="play-btn" onclick="playVideo()">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="pic2.png">
+                            <img src="play.png" class="play-btn">
+                        </div>
+                        <p>Looks Up <br>Sample Video</Video></p>
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="pic3.png">
+                            <img src="play.png" class="play-btn">
+                        </div>
+                        <p>Looks Up <br>
+                            Sample Video</Video></p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="Looksup-3.mp4" type="video/mp4">
+            </video>
+            <img src="close.png"  class="close-btn" onclick="stopVideo()">
+        </div>
+
+
+<script>
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo(){
+
+        videoPlayer.style.display = "none";
+        videoPlayer.style.audio = "muted";
+
+    }
+
+    function playVideo(file){
+        myVideo.scr = file;
+        videoPlayer.style.display = "block";
+    }
+
+</script>
+
+
+    </body>
+</html>
